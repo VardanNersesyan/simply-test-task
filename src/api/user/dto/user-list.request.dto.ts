@@ -1,6 +1,7 @@
-import { IsString, IsOptional, IsEnum, IsPositive } from 'class-validator';
-import { UserTypeEnum } from '../entities/user.entity';
 import { Transform } from 'class-transformer';
+import { UserTypeEnum } from '../entities/user.entity';
+import { intParser } from '../../../common/utilities/sanitize.utility';
+import { IsString, IsOptional, IsEnum, IsPositive } from 'class-validator';
 
 /*
  * @TODO Move PaginationDto to some common place for reuse in another list responses
@@ -8,12 +9,12 @@ import { Transform } from 'class-transformer';
 export class PaginationDto {
   @IsPositive()
   @IsOptional()
-  @Transform(({ value }) => parseInt(value, 10))
+  @Transform(intParser)
   page?: number;
 
   @IsPositive()
   @IsOptional()
-  @Transform(({ value }) => parseInt(value, 10))
+  @Transform(intParser)
   limit?: number;
 }
 
