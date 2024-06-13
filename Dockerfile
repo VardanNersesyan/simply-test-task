@@ -16,4 +16,5 @@ COPY migrations ./migrations
 
 EXPOSE 3000
 
+#On production I prefer to run migrations and seeds separately
 CMD ["sh", "-c", "yarn run migrate && yarn run seed:all && yarn start"]
