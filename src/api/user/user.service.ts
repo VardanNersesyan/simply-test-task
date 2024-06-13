@@ -4,14 +4,16 @@ import {
   NotAcceptableException,
   NotFoundException,
 } from '@nestjs/common';
-import { CreateUserRequestDto } from './dto/create-user.request.dto';
-import { UpdateUserRequestDto } from './dto/update-user.request.dto';
+import {
+  CreateUserRequestDto,
+  UpdateUserRequestDto,
+  UserProfileResponseDto,
+  UserListRequestDto,
+  UserListResponse,
+} from './dto';
 import { User } from './entities/user.entity';
+import { SignOutResponseDto } from '../auth/dto';
 import { UserRepository } from './user.repository';
-import { UserProfileResponseDto } from './dto/user-profile.response.dto';
-import { SignOutResponseDto } from '../auth/dto/sign-out.response.dto';
-import { UserListRequestDto } from './dto/user-list.request.dto';
-import { UserListResponse } from './dto/user-list.response';
 
 @Injectable()
 export class UserService {

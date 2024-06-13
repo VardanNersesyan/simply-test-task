@@ -1,9 +1,3 @@
-import { AuthService } from './auth.service';
-import { AuthGuard } from './guards/auth.guard';
-import { SignInRequestDto } from './dto/sign-in.request.dto';
-import { SignUpRequestDto } from './dto/sign-up.request.dto';
-import { RefreshAccessTokenRequestDto } from './dto/refresh-access-token.request.dto';
-import { SignUpResponseDto } from './dto/sign-up.response.dto';
 import {
   Body,
   Controller,
@@ -13,9 +7,17 @@ import {
   Request,
   UseGuards,
 } from '@nestjs/common';
+import {
+  SignInRequestDto,
+  SignUpRequestDto,
+  RefreshAccessTokenRequestDto,
+  SignUpResponseDto,
+  SignInResponseDto,
+  SignOutResponseDto,
+} from './dto';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './guards/auth.guard';
 import { RequestWithUser } from '../../common/interfaces/request-with-user';
-import { SignInResponseDto } from './dto/sign-in.response.dto';
-import { SignOutResponseDto } from './dto/sign-out.response.dto';
 
 @Controller('auth')
 export class AuthController {

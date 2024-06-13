@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { WorkFieldRequestDto } from './dto/work-field.request.dto';
-import { WorkFieldResponseDto } from './dto/work-field.response.dto';
 import { WorkFieldRepository } from './work-field.repository';
+import { WorkFieldRequestDto, WorkFieldResponseDto } from './dto';
 
 @Injectable()
 export class WorkFieldService {

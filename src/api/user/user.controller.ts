@@ -10,10 +10,9 @@ import {
   Query,
 } from '@nestjs/common';
 import { UserService } from './user.service';
-import { UpdateUserRequestDto } from './dto/update-user.request.dto';
 import { AuthGuard } from '../auth/guards/auth.guard';
+import { UpdateUserRequestDto, UserListRequestDto } from './dto';
 import { RequestWithUser } from '../../common/interfaces/request-with-user';
-import { UserListRequestDto } from './dto/user-list.request.dto';
 
 @UseGuards(AuthGuard)
 @Controller('user')

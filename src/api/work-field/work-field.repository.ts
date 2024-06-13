@@ -1,8 +1,8 @@
+import { Op } from 'sequelize';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import { Op } from 'sequelize';
-import { WorkField } from './entities/work-field.entity';
 import { FindOptions } from 'sequelize/types/model';
+import { WorkField } from './entities/work-field.entity';
 
 @Injectable()
 export class WorkFieldRepository {
