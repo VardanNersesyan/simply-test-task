@@ -1,6 +1,5 @@
 import {
   Injectable,
-  NotAcceptableException,
   NotFoundException,
   UnauthorizedException,
 } from '@nestjs/common';
@@ -9,7 +8,6 @@ import { JwtService } from '@nestjs/jwt';
 import { AppConfigService } from '../../config';
 import { JWTPayload } from './common/interfaces';
 import { UserService } from '../user/user.service';
-import { User } from '../user/entities/user.entity';
 import { SignUpRequestDto } from './dto/sign-up.request.dto';
 import { SignInRequestDto } from './dto/sign-in.request.dto';
 import { SignInResponseDto } from './dto/sign-in.response.dto';
@@ -18,7 +16,7 @@ import { SignOutRequestDto } from './dto/sign-out.request.dto';
 import { SignOutResponseDto } from './dto/sign-out.response.dto';
 import { RefreshAccessTokenResponseDto } from './dto/refresh-access-token.response.dto';
 import { UserRepository } from '../user/user.repository';
-import { SignUpResponseDto } from "./dto/sign-up.response.dto";
+import { SignUpResponseDto } from './dto/sign-up.response.dto';
 
 @Injectable()
 export class AuthService {

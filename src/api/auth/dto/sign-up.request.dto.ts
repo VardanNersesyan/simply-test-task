@@ -3,12 +3,13 @@ import {
   IsNotEmpty,
   MaxLength,
   MinLength,
-  IsEnum, IsOptional
-} from "class-validator";
+  IsEnum,
+  IsOptional,
+} from 'class-validator';
 import { Transform } from 'class-transformer';
 import { trim } from '../../../common/utilities/sanitize.utility';
 import { UserTypeEnum } from '../../user/entities/user.entity';
-import { WorkFieldExists } from "../../work-field/validators/work-field-exists.validator";
+import { WorkFieldExists } from '../../work-field/validators/work-field-exists.validator';
 export class SignUpRequestDto {
   @MaxLength(255)
   @IsEmail()

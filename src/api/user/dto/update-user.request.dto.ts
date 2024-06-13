@@ -1,10 +1,5 @@
 import { UserTypeEnum } from '../entities/user.entity';
-import {
-  IsEnum,
-  IsNotEmpty,
-  IsOptional,
-  MaxLength,
-} from 'class-validator';
+import { IsEnum, IsNotEmpty, IsOptional, MaxLength } from 'class-validator';
 import { Transform } from 'class-transformer';
 import { trim } from '../../../common/utilities/sanitize.utility';
 import { WorkFieldExists } from '../../work-field/validators/work-field-exists.validator';
